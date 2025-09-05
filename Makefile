@@ -49,14 +49,13 @@ bin-deps: .bin-deps
 .bin-deps: .create-bin .install-protoc
 	GOBIN=$(LOCAL_BIN) go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.64.5 && \
 	GOBIN=$(LOCAL_BIN) go install github.com/rakyll/gotest@v0.0.6 && \
-	go install github.com/easyp-tech/easyp/cmd/easyp@latest && \
+	go install github.com/easyp-tech/easyp/cmd/easyp@v0.7.11 && \
 	go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway@v2.18.1 && \
 	go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@v2.18.1 && \
 	go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28.1 && \
 	go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2.0 && \
 	go install golang.org/x/tools/cmd/goimports@v0.19.0 && \
 	go install github.com/envoyproxy/protoc-gen-validate@v1.2.1 && \
-	go get go.uber.org/mock/mockgen@latest && \
 	go install go.uber.org/mock/mockgen@latest
 
 .create-bin:
